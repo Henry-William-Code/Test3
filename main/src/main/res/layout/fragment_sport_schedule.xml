@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fss_tv_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/ic_sport_today"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="今天"
+        android:textColor="@android:color/black"
+
+        />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fss_tl_tab"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        app:tabIndicatorColor="#2D3041"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@android:color/holo_red_dark"
+        app:tabTextAppearance="@style/style_tab_layout_text_small"
+        app:tabTextColor="@color/black" />
+
+
+    <ImageView
+        android:id="@+id/fss_iv_screening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@mipmap/ic_sport_more" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fss_vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <!--<RadioGroup
+        android:id="@+id/fss_rg_top_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3E9EF"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/fss_rb_today"
+            style="@style/style_sport_schedule_tab_text"
+            android:drawableRight="@mipmap/ic_sport_today"
+            android:checked="true"
+            android:drawablePadding="2dp"
+            android:text="今天" />
+
+
+        <RadioButton
+            android:id="@+id/fss_rb_football"
+            style="@style/style_sport_schedule_tab_text"
+            android:text="足球" />
+
+
+        <RadioButton
+            android:id="@+id/fss_rb_tennis"
+            style="@style/style_sport_schedule_tab_text"
+            android:text="网球" />
+
+
+        <RadioButton
+            android:id="@+id/fss_rb_volleyball"
+            style="@style/style_sport_schedule_tab_text"
+            android:text="排球" />
+
+
+        <RadioButton
+            android:id="@+id/fss_rb_cricket"
+            style="@style/style_sport_schedule_tab_text"
+            android:text="板球" />
+
+
+        <TextView
+            android:id="@+id/fss_tv_screening"
+            style="@style/style_sport_schedule_tab_text"
+            android:drawableRight="@mipmap/ic_sport_more"
+            android:drawablePadding="2dp"
+            android:text="筛选" />
+
+        />
+    </RadioGroup>
+
+
+
+    <FrameLayout
+        android:id="@+id/fss_fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>-->
+
+</LinearLayout>

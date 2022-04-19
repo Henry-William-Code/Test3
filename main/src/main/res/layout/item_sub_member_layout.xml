@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y90"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_member_id"
+        style="@style/m_distribution_wh_tv"
+        tools:text="2010" />
+
+    <TextView
+        android:id="@+id/tv_first_deposit_amount"
+        style="@style/m_distribution_wh_tv"
+        tools:text="200.00" />
+
+    <TextView
+        android:id="@+id/tv_total_bet"
+        style="@style/m_distribution_wh_tv"
+        tools:text="10.00" />
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/avatar"
+        android:ellipsize="end"
+        android:maxWidth="130dp"
+        android:singleLine="true"
+        tools:text="111"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_toEndOf="@id/avatar"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="111"
+        android:textColor="@color/gray3"
+        android:textSize="14sp"
+        />
+
+
+    <ImageView
+        android:id="@+id/sex"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/name"
+        />
+
+    <ImageView
+        android:id="@+id/level_anchor"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/sex"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/sex"
+        />
+
+    <ImageView
+        android:id="@+id/level"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/sex"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/level_anchor"
+        />
+
+    <com.qgnix.common.custom.MyRadioButton
+        android:id="@+id/btn_follow"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/x20"
+        android:background="@drawable/bg_btn_follow2"
+        android:button="@null"
+        android:gravity="center"
+        android:textColor="@color/fg_btn_follow"
+        android:textSize="@dimen/text_size_22" />
+
+    <TextView
+        android:id="@+id/tv_live_flag"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_20"
+        android:layout_toStartOf="@id/btn_follow"
+        android:layout_alignBaseline="@+id/name"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/live_flag"/>
+
+    <View
+        style="@style/line2"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

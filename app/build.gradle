@@ -1,0 +1,165 @@
+apply plugin: rootProject.ext.plugins.application
+
+File signingFile = rootProject.file('config/signing.properties')
+
+// 配置
+def config = rootProject.ext.android
+// 签名
+def signing = rootProject.ext.signing
+// 依赖
+def library = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+
+    // 签名设置
+    if (signingFile.exists()) {
+        Properties props = new Properties()
+        props.load(new FileInputStream(signingFile))
+        signingConfigs {
+            release {
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+                storeFile rootProject.file(props['KEYSTORE_FILE'])
+                storePassword props['KEYSTORE_PASSWORD']
+            }
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a","arm64-v8a"  //armeabi、armeabi-v7a、arm64-v8a及x86 "arm64-v8a","x86"
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            //启用代码混淆
+//            minifyEnabled false
+            //混淆规则配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //shrinkResources true
+        }
+
+        //批量修改生成的apk文件名
+        def apkName = signing.prefixName
+        def versionName = null
+        def flavorName = null
+        android.applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def flavors = variant.productFlavors
+                for (int i = 0; i < flavors.size(); i++) {
+                    def flavor = flavors[i]
+                    versionName = "v${flavor.versionName}"
+                    flavorName = "${flavor.name}"
+                    outputFileName = "${apkName}_${versionName}_${signing.releaseTime}_${flavorName}.apk"
+                }
+            }
+        }
+    }
+
+    // 多渠道、多环境的不同配置
+    flavorDimensions signing.dimensions
+    productFlavors {
+        //线上
+        prod {
+            dimension signing.dimensions
+            applicationId config.applicationId
+            versionCode config.versionCode
+            versionName config.versionName
+
+            buildConfigField "int", "ENV_TYPE", config.envType
+            buildConfigField "String", "DEF_COUNTRY", config.defCountry
+
+            manifestPlaceholders = [
+                    app_name  : config.appName,
+                    serverHost: config.host,
+                    inviteCode: config.inviteCode,
+            ]
+        }
+        //开发
+        dev {
+            dimension signing.dimensions
+            applicationId config.applicationIdLocal
+            versionCode config.versionCodeLocal
+            versionName config.versionNameLocal
+
+            applicationIdSuffix config.suffixLocal//包名后缀
+
+            buildConfigField "int", "ENV_TYPE", config.envTypeLocal
+            buildConfigField "String", "DEF_COUNTRY", config.defCountryLocal
+
+            manifestPlaceholders = [
+                    app_name  : config.appNameLocal,
+                    serverHost: config.hostLocal,
+                    inviteCode: config.inviteCodeLocal,
+            ]
+        }
+
+        //预发布
+        pre {
+            dimension signing.dimensions
+            applicationId config.applicationIdPre
+            versionCode config.versionCodePre
+            versionName config.versionNamePre
+
+            applicationIdSuffix config.suffixPre//包名后缀
+
+            buildConfigField "int", "ENV_TYPE", config.envTypePre
+            buildConfigField "String", "DEF_COUNTRY", config.defCountryPre
+
+            manifestPlaceholders = [
+                    app_name  : config.appNamePre,
+                    serverHost: config.hostPre,
+                    inviteCode: config.inviteCodePre,
+            ]
+        }
+    }
+
+    compileOptions {
+        targetCompatibility config.jdk_targetCompatibility
+        sourceCompatibility config.jdk_sourceCompatibility
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':main')
+
+    annotationProcessor library.arouter_compiler
+    implementation library.bugly
+    implementation library.bugly_ndk
+    implementation 'com.appsflyer:af-android-sdk:5.0.0'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+
+
+}

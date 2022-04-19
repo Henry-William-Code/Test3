@@ -1,0 +1,88 @@
+apply plugin: rootProject.ext.plugins.library
+
+
+// 配置
+def config = rootProject.ext.android
+// 依赖
+def library = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        buildConfigField "String", "googleStore", config.googleStore
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility config.jdk_targetCompatibility
+        sourceCompatibility config.jdk_sourceCompatibility
+    }
+
+}
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api library.appcompatV7
+    api library.recyclerviewV7
+    api library.cardviewV7
+    api library.design
+    api library.multidex
+    //okHttp网络请求
+    api library.okhttp
+    //OkGo 是对okHttp的封装
+    api library.okgo
+    //OkGo上传下载扩展库
+    api library.okserver
+    //fastJson解析json
+    api library.fastjson
+    //eventbus事件总线
+    api library.eventbus
+    //使用Glide加载图片
+    api library.glide
+    //一个基于Glide的transformation库,拥有裁剪,着色,模糊,滤镜等多种转换效果
+    api library.glide_transformations
+    //图片裁剪
+    api library.ucrop
+    //带圆角，边框的的ImageView
+    api library.roundedimageview
+    //鲁班
+    api library.Luban
+    //gif库，播放礼物gif用
+    api library.gif_drawable
+    //svga播放器
+    api library.SVGAPlayer
+    //下拉刷新上拉加载
+    api library.smartRefreshLayout
+    //ViewPager指示器
+    api library.magicIndicator
+    //直播sdk
+    api files('libs/liteavsdk.jar')
+    //阿里 ARouter
+    api library.arouter
+    //轮播图
+    api library.banner
+    // 二维码控件
+    api library.zxing
+    // 国际化框架
+    api library.language
+    // 加密数据存储
+    api library.hawk
+
+    //时间选择器
+    api "org.jaaksi:pickerview:2.0.1"
+
+}

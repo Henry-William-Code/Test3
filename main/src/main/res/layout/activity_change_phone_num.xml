@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.ChangePhoneNumActivity">
+
+    <include layout="@layout/view_title" />
+
+    <EditText
+        android:id="@+id/et_phone_num"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/x40"
+        android:layout_marginTop="@dimen/y80"
+        android:layout_marginEnd="@dimen/x40"
+        android:background="@null"
+        android:hint="@string/login_input_phone"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:textColor="@color/black1"
+        android:textColorHint="@color/black4"
+        android:textSize="@dimen/text_size_30" />
+
+    <View
+        style="@style/m_divider"
+        android:layout_marginStart="@dimen/x40"
+        android:layout_marginEnd="@dimen/x40" />
+
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/base_main_btn"
+        android:text="@string/commit" />
+</LinearLayout>

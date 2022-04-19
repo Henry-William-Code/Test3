@@ -1,0 +1,22 @@
+RegisterActivity  用户注册界面
+
+MainActivity 首页
+    MainHomeFollowHolder  关注
+        MainHomeFollowAdapter 关注适配器
+    MainHomeLiveViewHolder 直播
+        item_main_home_live_left 左边视频item
+        item_main_home_live_right 右边视频item
+        CheckLivePresenter 直播点击事件
+    MainHomeVoiceViewHolder 语音
+
+LiveAudienceActivity   * 用户查看直播的房间详情
+
+LiveAudienceViewHolder  观众直播间逻辑
+
+LiveLinkMicPresenter * 观众和主播连麦的逻辑
+
+LiveGuardBuyDialogFragment 视频直播间购买守护弹窗
+
+VoiceGuardBuyDialogFragment 语音直播间购买守护弹窗
+
+LiveLinkMicPkPresenter 主播与主播PK

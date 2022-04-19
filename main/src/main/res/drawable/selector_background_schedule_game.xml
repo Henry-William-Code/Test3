@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+
+            <solid android:color="#B9B59E" />
+
+            <stroke android:color="#B9B59E" android:width="1px"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+
+            <solid android:color="@android:color/white" />
+
+            <stroke android:color="#B9B59E" android:width="1px"/>
+        </shape>
+    </item>-->
+    <item android:state_selected="true" android:drawable="@drawable/layer_list_indicator_game" />
+</selector>

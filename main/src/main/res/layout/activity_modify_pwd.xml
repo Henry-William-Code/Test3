@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        style="@style/ll_setting_item_style"
+        android:layout_marginTop="@dimen/y20">
+
+        <EditText
+            android:id="@+id/et_old_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/modify_pwd_old_1"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_28" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_setting_item_style">
+
+        <EditText
+            android:id="@+id/et_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/modify_pwd_new_1"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_28" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_setting_item_style">
+
+        <EditText
+            android:id="@+id/et_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/modify_pwd_confirm_1"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_28" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/base_main_btn"
+        android:text="@string/modify_pwd_confirm_2" />
+</LinearLayout>

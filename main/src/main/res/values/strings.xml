@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<resources>
+    <string name="account_details">Account details</string>
+    <string name="draw_history">Draw history</string>
+    <string name="my_follow">Favourite</string>
+    <string name="agent_makes_money">Agent commission</string>
+    <string name="contact_customer_service">Contact Customer Service</string>
+    <string name="charge_customer_service">Contact Deposit Customer Service</string>
+    <string name="charge_customer_googlepay">GooglePay</string>
+    <string name="help_center">Activity center</string>
+    <string name="setup">Setting</string>
+
+    <string name="vip">Level %d</string>
+    <string name="copy">copy</string>
+    <string name="total_assets">Total assets</string>
+    <string name="daily_interest_rate">daily interest rate</string>
+    <string name="Wallet_balance">Wallet balance</string>
+    <string name="Enter_transaction_password">Enter transaction password</string>
+    <string name="promotion_to_make_money">Agency commission</string>
+    <string name="look_details">see details</string>
+    <string name="payment">Deposit</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="make_money">Agency commission</string>
+    <string name="quota_cqonversion">Transfer</string>
+    <string name="customer_coupon">Coupon</string>
+    <string name="customer_support">Support</string>
+    <string name="up_login_pwd">Modify login password</string>
+    <string name="up_pay_pwd">Modify transaction password</string>
+    <string name="bank_card_management">Bank card management</string>
+    <string name="clear_cache">Clear cache</string>
+    <string name="new_version">The latest version</string>
+    <string name="privacy_and_security">Privacy and security</string>
+    <string name="language_switch">Language</string>
+    <string name="about_me">About us</string>
+    <string name="login_out">Sign out</string>
+    <string name="current_version">Current version:V%s</string>
+    <string name="Please_enter_the_recharge_amount">Please enter the deposit amount</string>
+    <string name="recharge_min_amount">Deposit minimum amount 10</string>
+    <string name="please_enter_the_remittance_name">Please enter the remittance name</string>
+    <string name="coin">COIN</string>
+    <string name="coin2">COIN.</string>
+    <string name="The_recharge_reward">The deposit reward is%s, up to 888888.00 COIN</string>
+    <string name="Remittance_name">Remittance name</string>
+    <string name="Remittance_message">Remittance message</string>
+    <string name="commit">commit</string>
+    <string name="recharge_success">Deposit success</string>
+    <string name="copy_success">copy success</string>
+
+    <string name="country_code">+91</string>
+    <string name="please_original_password">original password (the initial value is the login password)</string>
+    <string name="please_login_mobile_number">login mobile number</string>
+    <string name="please_new_password">new password</string>
+    <string name="please_confirm_password">confirm password</string>
+
+
+    <string name="transfer_tip">Support online bank transfer, [remittance message] please fill in the real name of the transferor</string>
+    <string name="Optional">Optional</string>
+    <string name="Please_enter_your_remittance_name">Please enter your remittance name</string>
+
+
+    <string name="Invitation_to_register">Please contact online customer service for agent commission</string>
+    <string name="Invitation_code">Invitation code：%s</string>
+    <string name="Friends_invited">Friends invited</string>
+    <string name="Number_of_effective_friends">Number of effective friends</string>
+    <string name="Yesterdays_earnings">Yesterday\'s earnings</string>
+    <string name="Cumulative_income">Cumulative income</string>
+    <string name="invite_friends">invite friends</string>
+    <string name="Friends_register">Friends register to download and login to the APP</string>
+    <string name="Give_cash">Give cash</string>
+    <string name="Invitation_reward">Invitation reward</string>
+    <string name="Successful_promotion">Successfully promote %s person, get %s COIN, unlimited stacking</string>
+    <string name="rule_of_activity">rule of activity</string>
+    <string name="save_photo">save Picture</string>
+    <string name="add_new_people">Add %s people</string>
+    <string name="account_no">account: %s</string>
+    <string name="customer_service">Customer service</string>
+    <string name="personal_information">Personal information</string>
+
+    <string name="menu_home">HOME</string>
+    <string name="menu_find">FIND</string>
+    <string name="menu_live">LIVE</string>
+    <string name="menu_game">GAME</string>
+    <string name="menu_me">MY</string>
+    <string name="No_announcement">No announcement</string>
+
+    <!--new-->
+    <string name="input_country">Country code</string>
+    <string name="default_country_name">India</string>
+
+    <string name="my_distribution">My distribution</string>
+    <string name="my_downline">My downline</string>
+    <string name="my_report">My report</string>
+
+    <string name="referrer">Referrer：%s</string>
+    <string name="available_cash_amount">Available cash amount</string>
+    <string name="total_offline">Total offline</string>
+    <string name="total_bet">Total buy</string>
+    <string name="total_gifts">Total gifts</string>
+    <string name="total_rebate">Agent bonus</string>
+    <string name="search">Search</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+    <string name="registered_number">Registered number：%s</string>
+    <string name="number_of_bets">Number of buy：%s</string>
+    <string name="bet_amount">Buy amount：%s</string>
+    <string name="gift_amount">Gift amount：%s</string>
+    <string name="rebate_amount">Agent bonus：%s</string>
+    <string name="please_enter_member_name">Please enter member name</string>
+    <string name="weed_out">Weed out</string>
+    <string name="member_name">Member name：%s</string>
+    <string name="get_rebate">Get rebate：%s</string>
+    <string name="member">Member</string>
+    <string name="category">Category</string>
+    <string name="consumption">Consumption</string>
+    <string name="rebate">Rebate</string>
+    <string name="person">Person</string>
+    <string name="live_flag">live…</string>
+    <string name="more">more</string>
+    <string name="i_want_to_recharge">Deposit</string>
+    <string name="i_want_to_withdraw">Withdraw</string>
+    <string name="betting_history">Buy Records</string>
+    <string name="historical_lottery">Lottery Records</string>
+    <string name="rules_of_play">Play Rules</string>
+    <string name="prize">prize</string>
+    <string name="hot">hot</string>
+    <string name="not_yet_opened">This country has not yet opened, please look forward to it！</string>
+
+    <string name="avatar">Avatar</string>
+    <string name="account">Account</string>
+    <string name="nickname">Nickname</string>
+    <string name="realname">RealName</string>
+    <string name="contact_number">Contact number</string>
+    <string name="last_login_time">Last login time</string>
+    <string name="registration_time">Registration time</string>
+
+    <string name="modify_phone_number">Modify phone number</string>
+    <string name="bound_mobile_phone_number">Bound mobile phone number:%s</string>
+    <string name="change_phone_number">Change phone number</string>
+    <string name="wagering_requirement">Wagering requirement</string>
+
+    <string name="channel">(%s)HonorPay %d</string>
+    <string name="channelCrypto">(%s)Crypto Currency %d</string>
+    <string name="limit">Limit: %d ~ %d</string>
+    <string name="amount">Amount (%s)</string>
+    <string name="min_limit">Min limit：%d</string>
+    <string name="max_limit">Max limit：%d</string>
+    <string name="recharging_coins">Recharging coins：%s</string>
+    <string name="online_payments">Online payments</string>
+    <string name="offline_payments">Offline payments(bank transfer)</string>
+    <string name="crypto_payments">Crypto Currency Payment</string>
+
+    <string name="adult_mode">Midnight Live Steaming</string>
+    <string name="non_adult_mode">Common Live Steaming</string>
+    <string name="anchor_salary_withdrawal">Anchor salary withdrawal</string>
+
+    <string name="member_id">Member ID</string>
+    <string name="first_deposit_amount">First deposit amount</string>
+
+    <string name="msg_list_title">Message Center</string>
+    <string name="msg_delete_hint">Are you sure you want to delete it</string>
+    <string name="Transfer_amount">Transfer Amount(COIN.)</string>
+    <string name="Total_fund">Total fund(COIN.)</string>
+    <string name="Wallet_In">Wallet In</string>
+    <string name="Wallet_Out">Wallet Out</string>
+    <string name="min_transfer_hint">Min %s transfer to wallet</string>
+
+
+
+    <!-- Sport UI -->
+    <string name="sport_title_in_progress">In progress</string>
+    <string name="sport_title_schedule">Schedule</string>
+
+
+    <array name="sport_schedule_game_tab">
+        <item>足球</item>
+        <item>网球</item>
+        <item>排球</item>
+        <item>板球</item>
+    </array>
+</resources>

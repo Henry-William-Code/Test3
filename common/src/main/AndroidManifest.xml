@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qgnix.common">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application android:allowBackup="true">
+        <activity
+            android:name="com.qgnix.common.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.qgnix.common.activity.ErrorActivity"
+            android:screenOrientation="portrait" />
+
+        <!--Android 7.0 拍照要用这个-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

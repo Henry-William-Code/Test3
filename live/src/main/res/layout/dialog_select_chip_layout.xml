@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_chip_amount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@android:color/transparent"
+        android:hint="@string/red_pack_7"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:singleLine="true" />
+
+    <View style="@style/m_divider" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_chip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/x20" />
+
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/base_main_btn"
+        android:layout_marginBottom="@dimen/y40"
+        android:text="@string/confirm" />
+</LinearLayout>

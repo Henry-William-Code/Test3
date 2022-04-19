@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/withdraw_item"
+    android:layout_height="@dimen/x120"
+    android:layout_marginTop="@dimen/y2"
+    android:paddingTop="@dimen/y10"
+    android:paddingBottom="@dimen/y10">
+
+    <TextView
+        android:id="@+id/tv_bank_name"
+        style="@style/withdraw_item_tv"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_32"
+        tools:text="122222" />
+
+    <TextView
+        android:id="@+id/tv_card_account_no"
+        style="@style/withdraw_item_tv"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:text="122222" />
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SetTransactionPwdAct">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        style="@style/ll_setting_item_style"
+        android:layout_marginTop="@dimen/y20">
+
+        <EditText
+            android:id="@+id/et_original_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/please_original_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_28" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_setting_item_style">
+
+        <EditText
+            android:id="@+id/et_new_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/please_new_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_28" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_setting_item_style">
+
+        <EditText
+            android:id="@+id/et_confirm_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/please_confirm_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_28" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/base_main_btn"
+        android:text="@string/commit" />
+
+</LinearLayout>

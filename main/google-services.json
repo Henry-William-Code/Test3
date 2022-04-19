@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "499851308560",
+    "project_id": "duoduotest-48ded",
+    "storage_bucket": "duoduotest-48ded.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499851308560:android:869026f0609e61b7592495",
+        "android_client_info": {
+          "package_name": "com.qgnixhonor.sport.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499851308560-lb3c1tlidfk6bq2lvao41vreek2pnrv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7xOUVtGPc16ZUWUhv-u6IrCuuBSlXSgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499851308560-lb3c1tlidfk6bq2lvao41vreek2pnrv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

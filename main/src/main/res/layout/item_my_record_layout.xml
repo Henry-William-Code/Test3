@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y90"
+    android:layout_marginTop="@dimen/y2"
+    android:background="@color/white"
+    android:divider="@color/divider_lines"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tv_member"
+        style="@style/m_distribution_tv"
+        tools:text="111" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        style="@style/m_distribution_tv"
+        tools:text="222" />
+
+    <TextView
+        android:id="@+id/tv_consumption"
+        style="@style/m_distribution_tv"
+        tools:text="333" />
+
+    <TextView
+        android:id="@+id/tv_rebate"
+        style="@style/m_distribution_tv"
+        tools:text="555" />
+
+</LinearLayout>

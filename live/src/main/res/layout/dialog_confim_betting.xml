@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y800"
+    android:background="@color/base_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/confirm_bet"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/text_size_30" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/x90"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/x25"
+            android:src="@mipmap/icon_close_black" />
+    </RelativeLayout>
+
+    <View style="@style/m_divider" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/y20"
+        android:paddingBottom="@dimen/y20"
+        android:textColor="@color/black1"
+        android:visibility="gone"
+        tools:text="1111111" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_notes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View style="@style/m_divider" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_multiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <View style="@style/m_divider" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@color/white"
+        android:paddingStart="@dimen/x20"
+        android:paddingTop="@dimen/y6"
+        android:paddingEnd="@dimen/x20"
+        android:paddingBottom="@dimen/y6">
+
+        <TextView
+            android:id="@+id/tv_betting_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/text_size_28"
+            tools:text="2222" />
+
+        <TextView
+            android:id="@+id/tv_betting_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_betting_count"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_toEndOf="@id/tv_betting_count"
+            android:gravity="center_vertical"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/text_size_28"
+            tools:text="333333" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/text_size_24"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x40"
+            android:background="@drawable/shape_confirm_bg"
+            android:paddingStart="@dimen/x30"
+            android:paddingTop="@dimen/y16"
+            android:paddingEnd="@dimen/x30"
+            android:paddingBottom="@dimen/y16"
+            android:text="@string/confirm_bet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32" />
+    </RelativeLayout>
+</LinearLayout>

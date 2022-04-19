@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/bg_live_chat_item"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x10"
+    android:paddingTop="@dimen/y4"
+    android:paddingRight="@dimen/x10"
+    android:paddingBottom="@dimen/y4">
+
+    <TextView
+        android:id="@+id/tv_follow_up_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        tools:text="111111111" />
+
+    <TextView
+        android:id="@+id/tv_follow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_follow_up_shape"
+        android:gravity="center"
+        android:paddingStart="@dimen/x20"
+        android:paddingTop="@dimen/y10"
+        android:paddingEnd="@dimen/x20"
+        android:paddingBottom="@dimen/y10"
+        android:text="@string/follow_up"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="@color/white" />
+</LinearLayout>
+
+

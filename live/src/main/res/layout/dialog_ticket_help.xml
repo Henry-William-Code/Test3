@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/x20"
+    android:background="@drawable/bg_live_gift_group"
+    android:elevation="@dimen/x6"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/x20"
+    android:paddingEnd="@dimen/x20">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y90">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x90"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/text_size_34"
+            android:textStyle="bold"
+            tools:text="12222" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/x30"
+            android:src="@mipmap/icon_close_black" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:lineSpacingExtra="@dimen/x6"
+        android:textColor="#424242"
+        android:textSize="@dimen/text_size_30"
+        tools:text="22222222222222222222222222222222222222222222222222" />
+
+    <Button
+        android:id="@+id/btn_i_know"
+        android:layout_width="@dimen/x280"
+        android:layout_height="@dimen/y80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginBottom="@dimen/y20"
+        android:background="@drawable/bg_red_pack_btn_2"
+        android:text="@string/i_know"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_28" />
+
+</LinearLayout>

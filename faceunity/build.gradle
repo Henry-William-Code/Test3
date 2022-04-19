@@ -1,0 +1,41 @@
+apply plugin: rootProject.ext.plugins.library
+
+// 配置
+def config = rootProject.ext.android
+// 依赖
+def library = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.assets.srcDirs += ['src/main/assets', 'src/main/effects/bundle']
+        main.res.srcDirs += ['src/mian/res', 'src/main/effects/res', 'src/main/filters/res']
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation library.appcompatV7
+    implementation library.recyclerviewV7
+    implementation library.circleimageview
+    implementation library.constraintLayout
+    //common
+    implementation project(':common')
+}

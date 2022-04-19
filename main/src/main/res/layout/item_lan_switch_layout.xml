@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y80"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/x20"
+    android:paddingEnd="@dimen/x20">
+
+    <ImageView
+        android:id="@+id/iv_country_icon"
+        android:layout_width="@dimen/x80"
+        android:src="@mipmap/ic_china"
+        android:padding="@dimen/x12"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_lan"
+        android:textColor="@drawable/tv_lan_color"
+        android:layout_marginStart="@dimen/x20"
+        android:textSize="@dimen/text_size_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="xxx" />
+</LinearLayout>

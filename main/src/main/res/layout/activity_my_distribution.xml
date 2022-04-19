@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background"
+    android:orientation="vertical"
+    tools:context=".activity.MyDistributionActivity">
+
+    <include layout="@layout/view_title" />
+
+
+    <RelativeLayout
+        style="@style/m_distribution_gv"
+        android:paddingTop="@dimen/y4"
+        android:paddingBottom="@dimen/y4"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y2">
+
+        <TextView
+            android:id="@+id/tv_cash_amount_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:text="@string/available_cash_amount"
+            android:textSize="@dimen/text_size_24" />
+
+        <TextView
+            android:id="@+id/tv_cash_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cash_amount_tag"
+            android:layout_marginTop="@dimen/y4"
+            android:text="0.00"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_36"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_withdraw"
+            style="@style/m_small_btn"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btn_copy_share"
+            android:text="@string/withdraw" />
+
+        <Button
+            android:id="@+id/btn_copy_share"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y60"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x20"
+            android:background="@drawable/bg_copy_solid"
+            android:text="@string/copy_link"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32" />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/m_distribution_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/m_distribution_flag_tv"
+                android:text="@string/total_offline" />
+
+            <TextView
+                android:id="@+id/tv_total_number_of_offline"
+                style="@style/m_distribution_lump_sum_tv"
+                tools:text="100" />
+        </LinearLayout>
+
+        <View style="@style/m_distribution_v_divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/m_distribution_flag_tv"
+                android:text="@string/total_bet" />
+
+            <TextView
+                android:id="@+id/tv_total_bet"
+                style="@style/m_distribution_lump_sum_tv"
+                tools:text="100" />
+        </LinearLayout>
+
+        <View style="@style/m_distribution_v_divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/m_distribution_flag_tv"
+                android:text="@string/total_gifts" />
+
+            <TextView
+                android:id="@+id/tv_total_gifts"
+                style="@style/m_distribution_lump_sum_tv"
+                tools:text="100" />
+
+        </LinearLayout>
+
+        <View style="@style/m_distribution_v_divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/m_distribution_flag_tv"
+                android:text="@string/total_rebate" />
+
+            <TextView
+                android:id="@+id/tv_total_rebate"
+                style="@style/m_distribution_lump_sum_tv"
+                tools:text="100" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/m_distribution_gv"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/y40"
+            android:layout_height="@dimen/y40"
+            android:layout_marginEnd="@dimen/x20"
+            android:src="@drawable/ic_date" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            style="@style/m_distribution_tv"
+            android:layout_height="wrap_content"
+            android:text="@string/start_time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            style="@style/m_distribution_tv"
+            android:layout_height="wrap_content"
+            android:text="@string/end_time" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/m_small_btn"
+            android:layout_marginStart="@dimen/x20"
+            android:text="@string/search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/m_distribution_wh_tv"
+            android:text="@string/member_id" />
+
+        <TextView
+            style="@style/m_distribution_wh_tv"
+            android:text="@string/first_deposit_amount" />
+
+        <TextView
+            style="@style/m_distribution_wh_tv"
+            android:text="@string/total_bet" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

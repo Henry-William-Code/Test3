@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:padding="@dimen/x20">
+    <TextView
+        android:id="@+id/tv_draw_date_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#c8c8c8"
+        android:textSize="@dimen/text_size_24"
+        tools:text="20200910" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_draw_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y20" />
+</LinearLayout>

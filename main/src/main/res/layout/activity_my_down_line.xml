@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MyDownLineActivity">
+
+    <include layout="@layout/view_title" />
+
+    <View style="@style/m_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20">
+
+        <EditText
+            android:id="@+id/et_keywords"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y60"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:background="@drawable/base_et_outline_bg"
+            android:hint="@string/please_enter_member_name"
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:textSize="@dimen/text_size_28" />
+
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/m_small_btn"
+            android:layout_marginStart="@dimen/x20"
+            android:text="@string/search" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

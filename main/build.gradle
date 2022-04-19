@@ -1,0 +1,61 @@
+apply plugin: rootProject.ext.plugins.library
+
+// 配置
+def config = rootProject.ext.android
+// 依赖
+def library = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+
+
+    compileOptions {
+      targetCompatibility JavaVersion.VERSION_1_8
+      sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //直播
+    api project(':live')
+    //短视频
+    //  api project(':video')
+    implementation library.appcompatV7
+    implementation library.supportV4
+    annotationProcessor library.arouter_compiler
+    implementation library.hawk
+    implementation library.sonic
+    implementation 'com.android.billingclient:billing:3.0.3'
+    api group: 'org.json', name: 'json', version: '20160810'
+    implementation 'com.appsflyer:af-android-sdk:5.0.0'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+
+    //RecyclerView的强大适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49'
+
+}

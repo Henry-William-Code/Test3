@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y800"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_live_gift_group"
+    android:elevation="3dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/top_up_tips"
+        android:textColor="@color/black1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:src="@mipmap/icon_close_black" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/top_up"
+        android:textColor="#ababab"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_I_know"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_red_pack_btn_2"
+        android:text="@string/i_know"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 深分割线 -->
+    <color name="main_cut_off_line_deep">#b2b2b2</color>
+
+
+    <!-- 浅分割线 -->
+    <color name="main_cut_off_line_shallow">#e0e0e0</color>
+
+
+    <!-- 标题颜色-正常 -->
+    <color name="title_color2">#E42417</color>
+
+    <!-- 标题颜色-按压 -->
+    <color name="title_color_pressed2">#B00F11</color>
+
+    <!-- 标题颜色-正常 -->
+    <color name="title_color">@android:color/white</color>
+</resources>

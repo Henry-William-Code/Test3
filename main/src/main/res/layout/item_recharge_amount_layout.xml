@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_price"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_marginEnd="@dimen/y20"
+    android:layout_marginTop="@dimen/y10"
+    android:layout_marginBottom="@dimen/y10"
+    android:background="@drawable/bg_recharge_amount"
+    android:layout_height="@dimen/y60"
+    android:textColor="@drawable/tv_recharge_amount_color"
+    android:orientation="vertical"
+    tools:text="1111" />
+

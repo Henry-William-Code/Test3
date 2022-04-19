@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background"
+    android:orientation="vertical"
+    tools:context=".activity.WithdrawActivity">
+
+    <include layout="@layout/view_title" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_add_bank"
+        style="@style/withdraw_item"
+        android:layout_height="@dimen/x120"
+        android:layout_marginTop="@dimen/y2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x60"
+            android:src="@mipmap/icon_add_bank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10"
+            android:text="@string/Please_bind_the_bank_card_first"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_30" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bank_info"
+        style="@style/withdraw_item"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingTop="@dimen/y10"
+        android:paddingBottom="@dimen/y10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            style="@style/withdraw_item_tv"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_32"
+            tools:text="122222" />
+
+        <TextView
+            android:id="@+id/tv_card_account_no"
+            style="@style/withdraw_item_tv"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_bank_name"
+            android:layout_marginTop="@dimen/y12"
+            android:textColor="@color/black4"
+            android:textSize="@dimen/text_size_26"
+            tools:text="122222" />
+
+        <TextView
+            android:id="@+id/tv_exchange_rate"
+            style="@style/withdraw_item_tv"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_card_account_no"
+            android:layout_marginTop="@dimen/y12"
+            android:textColor="@color/black4"
+            android:textSize="@dimen/text_size_26"
+            tools:text="122222" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            style="@style/base_arrow_right"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/withdraw_item"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            android:id="@+id/tv_total_balance_tag"
+            style="@style/withdraw_item_tv"
+            android:text="@string/total_balance" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            style="@style/withdraw_item_tv"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            tools:text="RM 0.00" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/withdraw_item"
+        android:layout_marginTop="@dimen/y2">
+
+        <TextView
+            style="@style/withdraw_item_tv"
+            android:text="@string/wagering_requirement" />
+
+        <TextView
+            android:id="@+id/tv_wagering_requirement"
+            style="@style/withdraw_item_tv"
+            android:layout_alignParentEnd="true"
+            android:text="0.00"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/withdraw_item"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            android:id="@+id/tv_amount_sign"
+            style="@style/withdraw_item_tv"
+            android:layout_height="wrap_content"
+            android:text="@string/coin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_30"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/please_enter_withdrawal_amount"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black4"
+            android:textSize="@dimen/text_size_30" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_target_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="@color/black4"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/coin" />
+
+
+
+    <LinearLayout
+        style="@style/withdraw_item"
+        android:layout_marginTop="@dimen/y20">
+
+        <ImageView
+            android:layout_width="@dimen/y40"
+            android:layout_height="@dimen/y40"
+            android:src="@mipmap/icon_me_dp" />
+
+        <EditText
+            android:id="@+id/et_transaction_password"
+            style="@style/withdraw_item_tv"
+            android:layout_width="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/Please_enter_transaction_password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_30" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/reset_transaction_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="@dimen/x20"
+        android:text="@string/set_transaction_pwd"
+        android:textColor="@color/global" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_marginTop="@dimen/y30"
+        style="@style/base_main_btn2"
+        android:text="@string/withdraw" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y30"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:text="@string/minimum_withdrawal" />
+
+    <Button
+        android:id="@+id/btn_anchor_withdraw"
+        style="@style/base_main_btn"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/y30"
+        android:background="@drawable/bg_base_main_blue_btn"
+        android:text="@string/anchor_salary_withdrawal" />
+</LinearLayout>

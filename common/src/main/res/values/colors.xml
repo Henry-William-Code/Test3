@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/global</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/global</color>
+
+    <color name="global">#ff6131</color>
+    <color name="global2">#907a48</color>
+    <color name="global3">#7d849e</color>
+    <color name="background">@color/gray2</color>
+    <color name="transparent">#00000000</color>
+    <color name="textColor">#323232</color>
+    <color name="white">#fff</color>
+    <color name="gray1">#969696</color>
+    <color name="gray2">#f5f5f5</color>
+    <color name="gray3">#c8c8c8</color>
+    <color name="gray4">#f9f9f9</color>
+    <color name="yellow">#fffa37</color>
+    <color name="yellow3">#FFF34D</color>
+    <color name="textColor2">#646464</color>
+    <color name="red">#ff0000</color>
+    <color name="pk_red">#f03a40</color>
+    <color name="pk_blue">#2a92f7</color>
+    <color name="black">#000000</color>
+    <color name="black1">#e6323232</color>
+    <color name="black2">#333333</color>
+    <color name="black3">#666666</color>
+    <color name="black4">#999999</color>
+    <color name="black5">#B3131313</color>
+    <color name="black6">#52737272</color>
+    <color name="black7">#80c0c0c0</color>
+    <color name="green">#42B647</color>
+    <color name="purple">#B381007F</color>
+    <color name="orange">#FF9800</color>
+    <color name="color0">#2d3041</color>
+    <color name="color1">#cbc9ca</color>
+    <color name="color2">#e5b03e</color>
+
+    <!--czq-->
+    <color name="divider_lines">#f0f0f0</color>
+    <color name="divider_lines2">#575a6b</color>
+    <color name="base_background">#f5f5f5</color>
+
+
+
+    <color name="main_background_color">#f5f5f5</color>
+
+</resources>

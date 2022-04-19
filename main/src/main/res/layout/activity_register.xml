@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@color/color0">
+
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/y90"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:onClick="backClick"
+            android:padding="@dimen/x20"
+            android:src="@mipmap/icon_white_back"
+             />
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:id="@+id/ibtn_customer"
+            android:layout_width="@dimen/y90"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/ibtn_change_lan"
+            android:background="@null"
+            android:padding="@dimen/x20"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_main_customer2" />
+
+        <ImageButton
+            android:id="@+id/ibtn_change_lan"
+            android:layout_width="@dimen/y90"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:padding="@dimen/x20"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_yuyan2" />
+    </RelativeLayout>
+
+    <View style="@style/m_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginRight="@dimen/x40"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_select_country"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginTop="@dimen/y60"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/input_country"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray1"
+                android:textSize="@dimen/text_size_30" />
+
+
+            <TextView
+                android:id="@+id/tv_country_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/default_country_name"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size_30" />
+
+            <ImageView
+                android:layout_width="@dimen/x40"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_arrow_right" />
+
+        </LinearLayout>
+
+        <View style="@style/m_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginTop="@dimen/y20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_phone_pwd"/>
+            <TextView
+                android:id="@+id/tv_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country_code"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/text_size_30" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_weight="1"
+                android:background="@null"
+                android:maxLength="10"
+                android:hint="@string/reg_input_phone"
+                android:inputType="phone"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:textSize="@dimen/text_size_30" />
+
+        </LinearLayout>
+
+        <View style="@style/m_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginTop="@dimen/y20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_my_certification"/>
+            <EditText
+                android:id="@+id/edit_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/reg_input_old_code"
+                android:maxLength="11"
+                android:minWidth="@dimen/y280"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:textSize="@dimen/text_size_30" />
+
+            <TextView
+                android:id="@+id/btn_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="@string/reg_get_code"
+                android:textColor="@color/reg_btn_code"
+                android:textSize="@dimen/text_size_30"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_check_code"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <View style="@style/m_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/y20"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/pwd_lock"/>
+            <EditText
+                android:id="@+id/edit_pwd_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/reg_input_pwd_1"
+                android:inputType="textPassword"
+                android:layout_marginLeft="5dp"
+                android:maxLength="11"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:textSize="@dimen/text_size_30" />
+
+        </LinearLayout>
+
+        <View style="@style/m_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/y20"
+            android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/pwd_lock"/>
+
+            <EditText
+                android:id="@+id/edit_pwd_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/reg_input_pwd_2"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:textSize="@dimen/text_size_30" />
+
+        </LinearLayout>
+
+        <View style="@style/m_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/y20"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_my_fans"/>
+        <EditText
+            android:id="@+id/edit_invite_code"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y80"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/reg_input_invite_code"
+            android:maxLength="11"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/gray3"
+            android:textSize="@dimen/text_size_30" />
+        </LinearLayout>
+        <View style="@style/m_divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_bank_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_real_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@null"
+                android:hint="@string/reg_input_real_name"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_30" />
+
+            <View style="@style/m_divider" android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_bank_num"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@null"
+                android:hint="@string/reg_input_bank_num"
+                android:inputType="number"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_30" />
+
+            <View style="@style/m_divider" android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_bank_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@null"
+                android:hint="@string/reg_input_bank_code"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/gray3"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_30" />
+
+            <View style="@style/m_divider" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/login_bg_shape4"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/reg_register_and_login"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

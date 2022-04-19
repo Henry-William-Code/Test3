@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="superplayer_hardware_Acceleration">हार्डवेयर का त्वरण</string>
+    <string name="superplayer_mirror">आईना</string>
+    <string name="superplayer_multi_speed_playback">मल्टी स्पीड प्लेबैक</string>
+    <string name="superplayer_brightness">चमक</string>
+    <string name="superplayer_sound">ध्वनि</string>
+    <string name="superplayer_sharpness">स्पष्टता</string>
+    <string name="superplayer_back_live">जीने के लिए वापस लौटें</string>
+    <string name="superplayer_original_picture">मूल पेंटिंग</string>
+    <string name="superplayer_screenshot_fail">स्क्रीनशॉट विफल रहा</string>
+</resources>

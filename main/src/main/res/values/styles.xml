@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--设置模块item-->
+    <style name="ll_setting_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingStart">@dimen/x36</item>
+        <item name="android:paddingEnd">@dimen/x36</item>
+    </style>
+
+    <style name="rl_setting_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingStart">@dimen/x36</item>
+        <item name="android:paddingEnd">@dimen/x36</item>
+    </style>
+
+    <!--设置rl item text-->
+    <style name="rl_inner_item_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <!--通用item右箭头-->
+    <style name="base_arrow_right">
+        <item name="android:layout_width">@dimen/x30</item>
+        <item name="android:layout_height">@dimen/x30</item>
+        <item name="android:layout_marginStart">@dimen/x10</item>
+        <item name="android:src">@mipmap/icon_arrow_right</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--通用button-->
+    <style name="base_btn_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:layout_marginStart">@dimen/x100</item>
+        <item name="android:layout_marginEnd">@dimen/x100</item>
+        <item name="android:layout_marginBottom">@dimen/y50</item>
+        <item name="android:background">@drawable/bg_login_out</item>
+        <item name="android:textColor">@color/global</item>
+        <item name="android:textSize">@dimen/text_size_34</item>
+    </style>
+    <!--我的分销-->
+
+    <style name="m_distribution_v_divider">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_marginTop">@dimen/y40</item>
+        <item name="android:layout_marginBottom">@dimen/y40</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider_lines</item>
+    </style>
+
+    <style name="m_distribution_flag_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">2</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+    <style name="m_distribution_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+    <style name="m_distribution_lump_sum_tv" parent="m_distribution_flag_tv">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/y10</item>
+        <item name="android:textSize">@dimen/text_size_32</item>
+    </style>
+
+    <style name="m_distribution_gv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:paddingStart">@dimen/x20</item>
+        <item name="android:paddingEnd">@dimen/x20</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="m_distribution_wh_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_28</item>
+    </style>
+
+    <style name="m_distribution_wm_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/x20</item>
+        <item name="android:paddingEnd">@dimen/x20</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:textSize">@dimen/text_size_28</item>
+        <item name="android:drawableEnd">@mipmap/icon_arrow_rights</item>
+    </style>
+    <!--小按钮-->
+    <style name="m_small_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/y60</item>
+        <item name="android:layout_marginTop">@dimen/x20</item>
+        <item name="android:layout_marginBottom">@dimen/x20</item>
+        <item name="android:background">@drawable/btn_small_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+
+    <!--我的页面-->
+    <style name="me_rl_item">
+        <item name="android:layout_marginTop">@dimen/y2</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:paddingStart">@dimen/x40</item>
+        <item name="android:paddingEnd">@dimen/x40</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="me_item_iv">
+        <item name="android:layout_width">@dimen/x40</item>
+        <item name="android:layout_height">@dimen/x40</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_marginEnd">@dimen/x20</item>
+    </style>
+
+    <style name="me_item_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+        <item name="android:layout_marginEnd">@dimen/x20</item>
+    </style>
+
+
+    <style name="me_recharge_ll">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="me_recharge_iv">
+        <item name="android:layout_width">@dimen/x100</item>
+        <item name="android:layout_height">@dimen/x100</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="me_recharge_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_marginTop">@dimen/y10</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <!--绑定银行卡-->
+    <style name="me_bank_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingStart">@dimen/x20</item>
+        <item name="android:paddingEnd">@dimen/x20</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="me_bank_tv_tag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black4</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="me_bank_ll_et">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:textColorHint">@color/black4</item>
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--提现-->
+    <style name="withdraw_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">@dimen/x20</item>
+        <item name="android:paddingEnd">@dimen/x20</item>
+    </style>
+
+    <style name="withdraw_item_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black4</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <!--用户信息-->
+    <style name="me_user_info_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">@dimen/x20</item>
+        <item name="android:paddingEnd">@dimen/x20</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+    </style>
+
+    <style name="me_user_info_item_tag_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black4</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="me_user_info_item_tv" parent="me_user_info_item_tag_tv">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Animleft" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_left_in</item>
+        <item name="android:windowExitAnimation">@anim/push_left_out</item>
+    </style>
+
+
+
+      <!-- 浅颜色背景线 -->
+    <style name="line_grey_shallow">
+        <item name="android:background">@color/main_cut_off_line_shallow</item>
+    </style>
+
+    <!-- 浅颜色横线 -->
+    <style name="horizontal_line_grey_shallow" parent="line_grey_shallow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+    </style>
+
+    <!-- 浅颜色坚线 -->
+    <style name="vertical_line_grey_shallow" parent="line_grey_shallow">
+        <item name="android:layout_width">2px</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 深颜色背景线 -->
+    <style name="line_grey_deep">
+        <item name="android:background">@color/main_cut_off_line_deep</item>
+    </style>
+
+
+    <!-- 深颜色横线 -->
+    <style name="horizontal_line_grey_deep" parent="line_grey_deep">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+    </style>
+
+
+    <!-- 黑颜色坚线 -->
+    <style name="vertical_line_grey_deep" parent="line_grey_deep">
+        <item name="android:layout_width">2px</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 黑颜色横线 -->
+    <style name="horizontal_line_grey_black">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+
+    <!-- 黑颜色坚线 -->
+    <style name="vertical_line_grey_black">
+        <item name="android:layout_width">2px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <!-- TabLayout字体大小 -->
+    <style name="style_tab_layout_text_small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+</resources>

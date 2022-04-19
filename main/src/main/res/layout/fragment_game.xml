@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.GameFragment">
+
+    <RelativeLayout
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="#2d3041">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/game"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="@dimen/x90"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/x20"
+            android:src="@mipmap/icon_live_search"
+            android:tint="@color/textColor"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <View style="@style/m_divider" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#EEF3FB"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_game_menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEF3FB" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/rv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:visibility="visible"
+                        android:background="@color/background"
+                        android:layout_height="50dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="@dimen/x40"
+                            >
+                            <TextView
+                                android:id="@+id/tv_game_coin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="game coin:100"
+                                android:textSize="12sp"
+                                android:textColor="#5b5b5b"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/tv_banlance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Platform balance:0.0"
+                                android:textSize="12sp"
+                                android:textColor="#5b5b5b"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_transfer"
+                            android:layout_width="@dimen/x110"
+                            android:layout_height="@dimen/x40"
+                            android:text="transfer in"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/game_transfer"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/x10"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="match_parent">
+
+                <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                    android:id="@+id/footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

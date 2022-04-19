@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eef2fb"
+    tools:context=".fragment.HomeHotFragment">
+
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y240"
+                app:delay_time="3000"
+                app:image_scale_type="fit_xy"
+                app:indicator_drawable_selected="@drawable/bg_home_indicator_selected"
+                app:indicator_drawable_unselected="@drawable/bg_home_indicator_unselected"
+                app:indicator_height="@dimen/x16"
+                app:indicator_margin="@dimen/x10"
+                app:indicator_width="@dimen/x16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="#202328"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/x20"
+                android:paddingEnd="@dimen/x20">
+
+                <ImageView
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:src="@mipmap/icon_lb" />
+
+                <TextView
+                    android:id="@+id/tv_notice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="#cbcbcd"
+                    android:textSize="@dimen/text_size_28"
+                    tools:text="11222" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginTop="@dimen/y2"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/x20"
+                    android:layout_marginEnd="8dp"
+                    android:src="@mipmap/icon_live_func_game" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/games"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_28" />
+
+                <LinearLayout
+                    android:id="@+id/ll_see_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/x20"
+                    android:paddingEnd="@dimen/x20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/see_more"
+                        android:textColor="@color/black4"
+                        android:textSize="@dimen/text_size_24" />
+
+                    <ImageView
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_arrow_right" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y10"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="@dimen/y10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingBottom="@dimen/y20">
+
+                <LinearLayout
+                    android:id="@+id/rela_chongzhi"
+                    style="@style/me_recharge_ll">
+
+                    <ImageView
+                        style="@style/me_recharge_iv"
+                        android:src="@mipmap/icon_home_deposit" />
+
+                    <TextView
+                        style="@style/me_recharge_tv"
+                        android:text="@string/payment"
+                        android:textSize="@dimen/text_size_20" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rela_tixian"
+                    style="@style/me_recharge_ll">
+
+                    <ImageView
+                        style="@style/me_recharge_iv"
+                        android:src="@mipmap/icon_home_withdraw" />
+
+                    <TextView
+                        style="@style/me_recharge_tv"
+                        android:text="@string/withdraw"
+                        android:textSize="@dimen/text_size_20" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rela_customer_support"
+                    style="@style/me_recharge_ll">
+
+                    <ImageView
+                        style="@style/me_recharge_iv"
+                        android:src="@mipmap/icon_home_support" />
+
+                    <TextView
+                        style="@style/me_recharge_tv"
+                        android:gravity="center"
+                        android:text="@string/customer_support"
+                        android:textSize="@dimen/text_size_20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rela_zhuanqian"
+
+                    style="@style/me_recharge_ll">
+
+                    <ImageView
+                        style="@style/me_recharge_iv"
+                        android:src="@mipmap/icon_home_make_money" />
+
+                    <TextView
+                        style="@style/me_recharge_tv"
+                        android:text="@string/make_money"
+                        android:textSize="@dimen/text_size_20" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

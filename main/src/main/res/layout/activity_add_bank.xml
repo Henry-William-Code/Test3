@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background"
+    android:orientation="vertical"
+    tools:context=".activity.AddBankActivity">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_currency"
+        style="@style/me_bank_ll"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            style="@style/me_bank_tv_tag"
+            android:text="@string/currency_name" />
+
+        <TextView
+            android:id="@+id/tv_currency"
+            style="@style/me_bank_ll_et"
+            android:hint="@string/please_select_currency" />
+
+        <ImageView style="@style/base_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bank"
+        style="@style/me_bank_ll"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            style="@style/me_bank_tv_tag"
+            android:text="@string/bank_name" />
+
+        <TextView
+            android:id="@+id/tv_bank"
+            style="@style/me_bank_ll_et"
+            android:hint="@string/please_select_bank" />
+
+        <ImageView style="@style/base_arrow_right" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_ifsc_code"
+        style="@style/me_bank_ll"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/me_bank_tv_tag"
+            android:text="@string/bank_ifsc_code" />
+
+        <EditText
+            android:id="@+id/et_ifsc_code"
+            style="@style/me_bank_ll_et"
+            android:hint="@string/reg_input_bank_code" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/me_bank_ll">
+
+        <TextView
+            style="@style/me_bank_tv_tag"
+            android:text="@string/cardholders_name" />
+
+        <EditText
+            android:id="@+id/et_cardholders_name"
+            style="@style/me_bank_ll_et"
+            android:hint="@string/please_enter_the_cardholders_name" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/me_bank_ll">
+
+        <TextView
+            style="@style/me_bank_tv_tag"
+            android:text="@string/bank_card_account" />
+
+        <EditText
+            android:id="@+id/et_bank_card_no"
+            style="@style/me_bank_ll_et"
+            android:hint="@string/please_enter_bank_account_no" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/y20"
+        android:textSize="@dimen/text_size_26"
+        tools:text="12233" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/y90"
+        android:layout_weight="1"
+        style="@style/base_main_red_btn"
+        android:text="@string/commit" />
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qgnix.main">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.ChangePhoneNumActivity" />
+        <activity android:name=".activity.EditNicknameActivity" />
+        <activity android:name=".activity.ModifyPhoneNumActivity" />
+        <activity android:name=".activity.SelectCountryActivity" />
+        <activity android:name=".activity.DrawHistoryDetailActivity" />
+        <activity android:name=".activity.DrawHistoryActivity" />
+        <activity android:name=".activity.MyRecordActivity" />
+        <activity android:name=".activity.MyDownLineActivity" />
+        <activity android:name=".activity.ResetTranslationPwdAct" />
+        <activity android:name=".activity.SetTransactionPwdAct" />
+        <activity android:name=".activity.MyDistributionActivity" />
+        <activity
+            android:name=".activity.BettingSelectActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".activity.AddBankActivity" />
+        <activity android:name=".activity.RechargeActivity"  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activity.OfflineRechargeActivity" />
+        <activity android:name=".activity.WithdrawActivity" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.MainListActivity" />
+        <activity android:name=".activity.PromoteActivity" />
+        <activity android:name=".activity.MsgTypeListActivity" />
+        <activity android:name=".activity.MsgDetailListActivity" />
+        <activity
+            android:name=".activity.LoginInvalidActivity"
+            android:theme="@style/dialog2" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="vj8c2y" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FollowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyCoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ModifyPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegistBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.BrowserActivity" />
+        <!-- 语言切换 -->
+        <activity
+            android:name=".activity.LanSwitchActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.BigImgActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WalletTransferActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

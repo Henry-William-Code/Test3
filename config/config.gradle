@@ -1,0 +1,157 @@
+ext {
+    plugins = [
+            application: 'com.android.application',
+            library    : 'com.android.library',
+    ]
+    signing = [
+            // app文件名时间格式
+            releaseTime: new Date().format("yyyyMMdd_HHmm", TimeZone.getDefault()),
+            //打包前缀名称
+            prefixName : "honor.win",
+            //多渠道配置 维度
+            dimensions : "cherry_app",
+    ]
+    android = [
+            compileSdkVersion      : 30,
+            buildToolsVersion      : "28.0.3",
+            minSdkVersion          : 21,
+            targetSdkVersion       : 30,
+            libraryVersionCode     : 1,
+            libraryVersionName     : "1.0",
+
+            // jdk 版本
+            jdk_targetCompatibility: 1.8,
+            jdk_sourceCompatibility: 1.8,
+
+            //正式环境
+            applicationId          : "com.qgnixhonor.sport",
+            versionCode            : 86,
+            versionName            : "1.0.86",
+            appName                : "@string/my_app_name",
+            appIcon                : "@mipmap/ic_launcher",
+            envType                : "1",
+            // 第一个域名: https:live.hzrgyl.com  第二域名  https:live.ozlinex.com 第三域名  https:live.tmshx.com
+            //当前生产环境  生产当前使用的地址 https://live.hzrgyl.com   作为第一个请求数据的地址 https://live.ozlinex.com
+            host                   : "https://live.hzrgyl.com,https://live.ozlinex.com,https://live.tmshx.com,https://live.cherry1000.com",
+            inviteCode             : "XR1SKW",  //todo 4WZTJJ 谷歌专用码  XR1SKW 为系统默认码
+            // 国家编码 如 MY  或者 en-MY
+            defCountry             : '"en-IN"',
+
+            //开发环境
+            applicationIdLocal     : "com.qgnixhonor.sport",
+            versionCodeLocal       : 34,
+            versionNameLocal       : "1.0.20",
+            appNameLocal           : "@string/my_app_name_test",
+            appIconLocal           : "@mipmap/ic_launcher",
+            suffixLocal            : ".test",
+            envTypeLocal           : "2",
+            //当前开发环境  开发当前使用的地址  https://live.yudlan.com  作为第一个请求数据的地址 https://www.yudlan.com
+//            hostLocal              : "http://69.172.93.174",
+            //hostLocal              : "http://156.241.5.131", "http://dev.cherry8000.com",
+            hostLocal              : "http://dev.cherry8000.com",//dev.cherry8000.com45.207.168.238 //http://69.172.93.174   https://live.hzrgyl.com
+            inviteCodeLocal        : "CWVSQ7",
+            // 国家编码 如 MY  或者 en-MY
+            defCountryLocal        : '"en-IN"',
+
+            //预发布环境
+            applicationIdPre       : "com.qgnixhonor.sport",
+            versionCodePre         : 78,
+            versionNamePre         : "1.0.78",
+            appNamePre             : "@string/my_app_name_pre",
+            appIconPre             : "@mipmap/ic_launcher",
+            suffixPre              : ".pre",
+            envTypePre             : "3",
+            // "https://pre.tmshx.com  https://pre.1727uu.com"
+            hostPre                : "http://69.172.93.174",
+            inviteCodePre          : "CWVSQ7",
+            // 国家编码 如 MY  或者 en-MY
+            defCountryPre          : '"en-IN"',
+            //1:表示谷歌市场  2或者其他：表示非谷歌市场
+            googleStore          : '"0"',  //todo 1 谷歌专用码  0 为系统默认码
+    ]
+
+
+    dependencies = [
+            //appcompatV7
+            'appcompatV7'        : 'com.android.support:appcompat-v7:28.0.0',
+            //recyclerview-v7
+            recyclerviewV7       : 'com.android.support:recyclerview-v7:28.0.0',
+            //design
+            design               : 'com.android.support:design:28.0.0',
+            //cardview-v7
+            cardviewV7           : 'com.android.support:cardview-v7:28.0.0',
+            //support-v4
+            supportV4            : 'com.android.support:support-v4:28.0.0',
+            //constraintLayout
+            constraintLayout     : 'com.android.support.constraint:constraint-layout:1.1.3',
+
+            multidex             : 'com.android.support:multidex:1.0.1',
+
+            //testCompile
+            testJunit            : 'junit:junit:4.13',
+            testRunner           : 'com.android.support.test:runner:1.0.2',
+            testEspresso         : 'com.android.support.test.espresso:espresso-core:3.0.2',
+
+            //网络 okhttp
+            okhttp               : 'com.squareup.okhttp3:okhttp:3.11.0',
+            //OkGo 是对okHttp的封装
+            okgo                 : 'com.lzy.net:okgo:3.0.4',
+            //OkGo上传下载扩展库
+            okserver             : 'com.lzy.net:okserver:2.0.5',
+            //fastjson解析
+            fastjson             : 'com.alibaba:fastjson:1.1.70.android',
+            gson                 : 'com.google.code.gson:gson:2.8.5',
+            //eventbus事件总线
+            eventbus             : 'org.greenrobot:eventbus:3.0.0',
+
+            //使用Glide加载图片
+            glide                : 'com.github.bumptech.glide:glide:4.9.0',
+            //一个基于Glide的transformation库,拥有裁剪,着色,模糊,滤镜等多种转换效果
+            glide_transformations: 'jp.wasabeef:glide-transformations:3.1.1',
+            //带圆角，边框的的ImageView
+            roundedimageview     : 'com.makeramen:roundedimageview:2.3.0',
+            circleimageview      : 'de.hdodenhof:circleimageview:3.0.0',
+            //图片裁剪
+            ucrop                : 'com.github.yalantis:ucrop:2.2.2',
+            //鲁班压缩图片
+            Luban                : 'top.zibin:Luban:1.1.8',
+            //轮播图
+            banner               : 'com.youth.banner:banner:1.4.9',
+            //ViewPager指示器 https://github.com/hackware1993/MagicIndicator
+            magicIndicator       : 'com.github.hackware1993:MagicIndicator:1.6.0',
+
+            //gif库，播放礼物gif用
+            gif_drawable         : 'pl.droidsonroids.gif:android-gif-drawable:1.2.15',
+            //svga 动画播放器  https://github.com/svga/SVGAPlayer-Android
+            SVGAPlayer           : 'com.github.yyued:SVGAPlayer-Android:2.4.0',
+
+            //ARouter
+            arouter              : 'com.alibaba:arouter-api:1.4.1',
+            arouter_compiler     : 'com.alibaba:arouter-compiler:1.2.2',
+
+            //下拉刷新上拉加载
+            smartRefreshLayout   : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20',
+            // 国际化
+            language             : 'com.hjq:language:6.0',
+            // 加密数据存储
+            hawk                 : 'com.orhanobut:hawk:2.0.1',
+            // 筛选器
+            pickerView           : 'com.contrarywind:Android-PickerView:4.1.9',
+            //socket
+            socket_client        : 'io.socket:socket.io-client:1.0.0',
+            // zxing
+            zxing                : 'com.google.zxing:core:3.3.0',
+            //加快webview 加载速度
+            sonic                : 'com.tencent.sonic:sdk:3.1.0',
+            //腾讯bugly
+            bugly                : 'com.tencent.bugly:crashreport:3.2.422',
+            bugly_ndk            : 'com.tencent.bugly:nativecrashreport:3.7.5',
+            //视频播放组件
+//            gsyVideoPlayer       : 'com.shuyu:GSYVideoPlayer:6.0.3',
+
+            gsyVideoPlayer : 'com.shuyu:gsyVideoPlayer-java:6.0.3',
+            video_armv5 : 'com.shuyu:gsyVideoPlayer-armv5:6.0.3',
+            video_armv7 : 'com.shuyu:gsyVideoPlayer-armv7a:6.0.3',
+            video_arm64 : 'com.shuyu:gsyVideoPlayer-arm64:6.0.3',
+    ]
+}

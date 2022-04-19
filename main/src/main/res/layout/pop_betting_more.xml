@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/y20"
+    android:layout_marginEnd="@dimen/x40"
+    android:background="@color/white"
+    android:divider="@color/black"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/recharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/y40"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/y40"
+        android:layout_marginBottom="@dimen/y20"
+        android:text="@string/i_want_to_recharge" />
+
+    <TextView
+        android:id="@+id/withdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/y40"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/y40"
+        android:layout_marginBottom="@dimen/y20"
+        android:text="@string/i_want_to_withdraw" />
+
+    <TextView
+        android:id="@+id/betting_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/y40"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/y40"
+        android:layout_marginBottom="@dimen/y20"
+        android:text="@string/betting_history" />
+
+    <TextView
+        android:id="@+id/historical_lottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/y40"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/y40"
+        android:layout_marginBottom="@dimen/y20"
+        android:text="@string/historical_lottery" />
+
+    <TextView
+        android:id="@+id/rules_of_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/y40"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/y40"
+        android:layout_marginBottom="@dimen/y20"
+        android:text="@string/rules_of_play" />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qgnix.live">
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.LiveAnchorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LiveAudienceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.LiveReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LiveAddImpressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveContributeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveAdminListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveShutUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveBlackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TicketClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.QutotaConversionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.BettingRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.WebViewLiveActivity"
+            android:screenOrientation="portrait" /> <!-- Android 9.0移除了apache的HttpClient，而金山sdk中用到了这个，不加这个的话在Android 9.0会崩溃 -->
+        <activity android:name=".activity.WebViewTestActivity"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service
+            android:name="com.xtremeprog.sdk.ble.BleService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

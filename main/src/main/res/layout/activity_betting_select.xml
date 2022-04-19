@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/view_title" />
+    <!--    app:tabBackground="@drawable/tab_item_bg"-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/global"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="@dimen/y6"
+        app:tabMinWidth="@dimen/y260"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/black4" />
+
+    <View style="@style/m_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_last_draw_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            tools:text="xxx期 开奖" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_draw_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_last_draw_no"
+            android:layout_marginTop="@dimen/y20" />
+
+        <TextView
+            android:id="@+id/tv_current_draw_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            tools:text="xxxxx期 封盘中" />
+
+        <TextView
+            android:id="@+id/tv_current_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_current_draw_no"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/y20"
+            android:text="@string/draw_time"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_26" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/m_divider"
+        android:layout_height="@dimen/y20" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eff3fc">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp" />
+    </LinearLayout>
+
+
+    <!--    <View style="@style/m_divider" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="#eff3fc"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20">
+
+        <TextView
+            android:id="@+id/tv_betting_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_24"
+            tools:text="共1注  8.00 金币" />
+
+        <ImageView
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_balance"
+            android:src="@mipmap/icon_gold_coin" />
+
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x16"
+            android:layout_marginEnd="@dimen/x16"
+            android:layout_toLeftOf="@id/tv_recharge"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24"
+            tools:text="141" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_pay_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/y10"
+            android:paddingRight="@dimen/x20"
+            android:paddingBottom="@dimen/y10"
+            android:text="@string/recharge"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="#a5adc4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20">
+
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_pay_bg2"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/y10"
+            android:paddingRight="@dimen/x20"
+            android:paddingBottom="@dimen/y10"
+            android:text="@string/reset"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24" />
+
+        <TextView
+            android:id="@+id/tv_machine_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_toRightOf="@+id/tv_reset"
+            android:background="@drawable/shape_pay_bg2"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/y10"
+            android:paddingRight="@dimen/x20"
+            android:paddingBottom="@dimen/y10"
+            android:text="@string/machine_selection"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24" />
+
+        <TextView
+            android:id="@+id/tv_chip_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x40"
+            android:layout_toLeftOf="@+id/betting"
+            android:background="@drawable/et_chip_bg_shape"
+            android:gravity="center"
+            android:minWidth="60dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="@dimen/text_size_24" />
+
+        <TextView
+            android:id="@+id/betting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:background="@drawable/bt_bg_shape"
+            android:paddingLeft="@dimen/x30"
+            android:paddingTop="@dimen/y10"
+            android:paddingRight="@dimen/x30"
+            android:paddingBottom="@dimen/y10"
+            android:text="@string/Betting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.PromoteActivity">
+
+    <include layout="@layout/view_title" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@mipmap/bg_share_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:gravity="center"
+                android:paddingStart="@dimen/x20"
+                android:paddingEnd="@dimen/x20"
+                android:text="@string/Invitation_to_register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_40"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:layout_margin="@dimen/x20"
+                android:background="@drawable/bg_promote_data"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x20"
+                android:paddingEnd="@dimen/x20">
+
+                <TextView
+                    android:id="@+id/tvInviteCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/global"
+                    android:textSize="@dimen/text_size_30"
+                    tools:text="邀请码：JN5L6" />
+
+                <Button
+                    android:id="@+id/btCopy"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/bg_bouns"
+                    android:text="@string/copy"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_30" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@mipmap/icon_omit" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_marginEnd="@dimen/x20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_promote_data"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x20">
+
+                    <ImageView
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_promote_yiyaoqing" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y16"
+                        android:gravity="center"
+                        android:text="@string/Friends_invited"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_30" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvBuddyNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global"
+                            android:textSize="@dimen/text_size_40"
+                            tools:text="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/person"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_size_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_promote_data"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x20">
+
+                    <ImageView
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_promote_youxiao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y16"
+                        android:gravity="center"
+                        android:text="@string/Number_of_effective_friends"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_30" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvEffectiveBuddyNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/global"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/person"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_size_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_promote_data"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x20">
+
+                    <ImageView
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_promote_shouyi" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y16"
+                        android:gravity="center"
+                        android:text="@string/Yesterdays_earnings"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_30" />
+
+                    <TextView
+                        android:id="@+id/tvLastAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/global"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_promote_data"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x20">
+
+                    <ImageView
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_promote_leiji" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y16"
+                        android:gravity="center"
+                        android:text="@string/Cumulative_income"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_30" />
+
+                    <TextView
+                        android:id="@+id/tvAllAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/global"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_marginTop="@dimen/y20"
+                android:layout_marginEnd="@dimen/x20"
+                android:layout_marginBottom="@dimen/y20"
+                android:background="@drawable/bg_promote_data"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/x20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/x120"
+                        android:layout_weight="1"
+                        android:src="@mipmap/icon_promote_yaoqing" />
+
+                    <ImageView
+                        android:layout_width="@dimen/x32"
+                        android:layout_height="@dimen/y40"
+                        android:src="@mipmap/icon_jump_global" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/x120"
+                        android:layout_weight="1"
+                        android:src="@mipmap/icon_promote_dow" />
+
+                    <ImageView
+                        android:layout_width="@dimen/x32"
+                        android:layout_height="@dimen/y40"
+                        android:src="@mipmap/icon_jump_global" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/x120"
+                        android:layout_weight="1"
+                        android:src="@mipmap/icon_promote_song" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/invite_friends"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_26" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/Friends_register"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_26" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Give_cash"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_26" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_marginEnd="@dimen/x20"
+                android:layout_marginBottom="@dimen/y20"
+                android:background="@drawable/bg_promote_data"
+                android:orientation="vertical"
+                android:padding="@dimen/x20">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/x80"
+                    android:layout_marginEnd="@dimen/x80"
+                    android:background="@mipmap/bg_promote_text">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/x20"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:gravity="center"
+                        android:text="@string/Invitation_reward"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_36" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvTitlesub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/y20"
+                    android:text="@string/Successful_promotion"
+                    android:textColor="@color/global"
+                    android:textSize="@dimen/text_size_40" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/x80"
+                    android:layout_marginEnd="@dimen/x80"
+                    android:background="@mipmap/bg_promote_text">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/x20"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:gravity="center"
+                        android:text="@string/rule_of_activity"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_36" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_invitation_reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/promote_text"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_size_26" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginEnd="@dimen/x20"
+        android:background="@drawable/bg_promote_data"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <Button
+            android:id="@+id/btnCopy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_weight="1"
+            android:background="@drawable/bg_copy_solid"
+            android:text="@string/copy_link"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32" />
+
+        <Button
+            android:id="@+id/btnSaveImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bouns"
+            android:text="@string/save_photo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32" />
+
+    </LinearLayout>
+
+</LinearLayout>

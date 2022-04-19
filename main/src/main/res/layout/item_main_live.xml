@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x12"
+    app:cardCornerRadius="@dimen/x10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y350"
+            android:background="@color/black7">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_ticket_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ada96c"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/x10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_26"
+                android:visibility="gone"
+                tools:text="彩票名称" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/y16"
+                android:layout_marginEnd="@dimen/x100"
+                android:layout_marginBottom="@dimen/y16"
+                android:drawablePadding="@dimen/x10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_24"
+                tools:text="city city city city city city city city city city city city city city city city city city city " />
+
+
+            <TextView
+                android:id="@+id/tv_viewers"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y40"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/y10"
+                android:layout_marginEnd="@dimen/y16"
+                android:layout_marginBottom="@dimen/y16"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_26"
+                tools:text="12390" />
+
+            <ImageView
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_toStartOf="@id/tv_viewers"
+                android:src="@mipmap/icon_hot_live" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl"
+            android:layout_marginTop="@dimen/y10"
+            android:layout_marginBottom="@dimen/y10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/y16"
+            android:paddingEnd="@dimen/y16"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_28"
+            tools:text="标题标题标题标题标题标题" />
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginBottom="@dimen/y10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/y16"
+            android:paddingEnd="@dimen/x10"
+            android:textColor="@color/black4"
+            android:textSize="@dimen/text_size_26"
+            tools:text="昵称昵称昵称昵称昵称昵称昵" />
+
+        <ImageView
+            android:id="@+id/iv_hot"
+            android:layout_width="@dimen/x30"
+            android:src="@mipmap/fire"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/tv_nick_name"
+            android:scaleType="fitEnd"
+            android:paddingBottom="@dimen/x6"
+            android:layout_alignBottom="@+id/tv_nick_name"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

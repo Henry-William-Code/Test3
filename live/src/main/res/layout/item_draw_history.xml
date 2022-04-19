@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/x20"
+    android:paddingRight="@dimen/x20"
+    android:paddingBottom="@dimen/x20">
+
+    <RelativeLayout
+        android:id="@+id/ll_left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#e6e5ea" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_ticket_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_toRightOf="@+id/ll_left"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_30"
+        tools:text="六合彩" />
+
+    <TextView
+        android:id="@+id/tv_draw_date_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_ticket_name"
+        android:layout_toEndOf="@id/tv_ticket_name"
+        android:textColor="@color/black3"
+        android:textSize="@dimen/text_size_24"
+        tools:text="20200910" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_draw_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ticket_name"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_toRightOf="@+id/ll_left" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="@dimen/x32"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_arrow_right" />
+
+
+</RelativeLayout>

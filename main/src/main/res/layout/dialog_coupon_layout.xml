@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingStart="@dimen/x50"
+    android:paddingEnd="@dimen/x50">
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/icon_tiecard_top"
+        android:gravity="center"
+        android:text="@string/customer_coupon" />
+
+    <View
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/y60"
+        android:layout_alignParentEnd="true" />
+
+    <WebView
+        android:id="@+id/wv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y250"
+        android:layout_below="@id/tv_top" />
+</RelativeLayout>

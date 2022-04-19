@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_blackground">
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x100"
+        android:layout_gravity="end"
+        android:padding="@dimen/x20"
+        android:src="@mipmap/icon_live_close"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/play_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.qgnix.common.custom.MyViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:id="@+id/ll_disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_video_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_marginBottom="@dimen/y20"
+            android:text="@string/the_anchor_has_been_downloaded"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/tv_to_home"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/x50"
+            android:paddingEnd="@dimen/x50"
+            android:gravity="center"
+            android:background="@drawable/bg_back_to_homepage_shape"
+            android:textColor="@color/white"
+            android:text="@string/live_back"
+            android:layout_height="@dimen/y80"/>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rL_root"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingStart="@dimen/x20"
+    android:paddingEnd="@dimen/x20"
+    android:layout_marginBottom="@dimen/y2"
+    android:layout_height="@dimen/y90">
+
+    <TextView
+        android:id="@+id/tv_channel_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/black3"
+        android:textSize="@dimen/text_size_32"
+        tools:text="充值" />
+
+    <TextView
+        android:id="@+id/tv_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/black4"
+        android:layout_toStartOf="@id/iv_arrow"
+        android:textSize="@dimen/text_size_28"
+        tools:text="充值" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+       style="@style/base_arrow_right"/>
+</RelativeLayout>

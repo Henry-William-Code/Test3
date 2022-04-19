@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background"
+    android:orientation="vertical"
+    tools:context=".activity.ModifyPhoneNumActivity">
+
+    <include layout="@layout/view_title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y100"
+        android:src="@mipmap/icon_modify_phone" />
+
+    <TextView
+        android:id="@+id/tv_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y60"
+        android:layout_marginBottom="@dimen/y60"
+        android:text="@string/bound_mobile_phone_number"
+        android:textColor="@color/black1"
+        android:textSize="@dimen/text_size_30" />
+
+    <Button
+        android:id="@+id/btn_change_phone_num"
+        style="@style/base_main_btn"
+        android:text="@string/change_phone_number" />
+</LinearLayout>

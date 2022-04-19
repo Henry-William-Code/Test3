@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_background"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y240"
+                android:layout_margin="@dimen/x20"
+                android:background="@mipmap/bg_conversion_head"
+                android:padding="@dimen/x20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Available_balance"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_32" />
+
+                <TextView
+                    android:id="@+id/tv_account_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y68"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_40" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/convertible_game_currency"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_26" />-->
+
+                <!--<TextView
+                    android:id="@+id/tv_game_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/y68"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_40" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y80"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/y5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/y10"
+                    android:paddingBottom="@dimen/y10">
+
+                    <TextView
+                        android:id="@+id/tv_zh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="@string/Automatic_balance_conversion"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_24"
+                        android:visibility="invisible"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+
+                    <Button
+                        android:id="@+id/btn_yjzr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@drawable/bg_yjzr"
+                        android:paddingStart="@dimen/x15"
+                        android:paddingEnd="@dimen/x15"
+                        android:text="@string/one_click_recycling"
+                        android:textColor="@color/global"
+                        android:textSize="@dimen/text_size_30" />
+                </LinearLayout>
+
+
+                <!--<TextView
+                    android:id="@+id/tv_alert_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/convert_game_currency_msg"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_24" />-->
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

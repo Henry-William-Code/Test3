@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y90"
+    android:background="@color/color0">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/x90"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:onClick="backClick"
+        android:padding="@dimen/x20"
+        android:src="@mipmap/icon_white_back" />
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_36"
+        android:textStyle="bold"
+        tools:text="1111" />
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:text="@string/add_bank"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_30"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_customer"
+        android:layout_width="@dimen/y90"
+        android:layout_height="match_parent"
+        android:padding="@dimen/x15"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@mipmap/icon_main_customer" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_lines" />
+</RelativeLayout>

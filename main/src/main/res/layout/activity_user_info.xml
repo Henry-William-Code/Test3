@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background"
+    android:orientation="vertical"
+    tools:context=".activity.UserInfoActivity">
+
+    <include layout="@layout/view_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_avatar"
+        style="@style/me_user_info_item">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/avatar" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y80"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_avatar_placeholder"
+            app:riv_oval="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_account"
+        style="@style/me_user_info_item">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/account" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            style="@style/me_user_info_item_tv"
+            tools:text="11111" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nickname"
+        style="@style/me_user_info_item">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/nickname" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            style="@style/me_user_info_item_tv"
+            tools:text="11111" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_realname"
+        android:visibility="gone"
+        style="@style/me_user_info_item">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/realname" />
+
+        <TextView
+            android:id="@+id/tv_realname"
+            style="@style/me_user_info_item_tv"
+            tools:text="11111" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_contact_number"
+        style="@style/me_user_info_item"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/contact_number" />
+
+        <TextView
+            android:id="@+id/tv_contact_number"
+            style="@style/me_user_info_item_tv"
+            tools:text="11111" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/me_user_info_item"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/last_login_time" />
+
+        <TextView
+            android:id="@+id/tv_last_login_time"
+            style="@style/me_user_info_item_tv"
+            tools:text="11111" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/me_user_info_item">
+
+        <TextView
+            style="@style/me_user_info_item_tag_tv"
+            android:text="@string/registration_time" />
+
+        <TextView
+            android:id="@+id/tv_register_time"
+            style="@style/me_user_info_item_tv"
+            tools:text="11111" />
+    </LinearLayout>
+</LinearLayout>
